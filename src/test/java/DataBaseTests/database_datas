@@ -1,0 +1,7 @@
+jdbc: postgresql://medunna.com:5432/medunna_db
+username: medunna_user
+password: medunna_pass_987
+
+
+
+

@@ -1,0 +1,31 @@
+*** ***************
+attribute içerisindeki degeri almak icin;
+
+public static String  getValueWithJs(String elementId){
+    JavascriptExecutor js=(JavascriptExecutor)Driver.getDriver();
+    String value=js.executeScript("return document.getElementById('"+elementId+"').value").toString();
+    return value;
+}
+**************
+
+String actaul_firstname = page.first_name.getAttribute("value");
+value attribute daki değeri almak için
+*******************
+locate alınan elementin border ve backgroundColor inin değiştirilmesi.
+  WebElement login = driver.findElement(By.id("ctl00_cphContentBody_ctl01_loginControl_LoginButton"));
+        js.executeScript("arguments[0].style.border = '3px solid red'", login);
+        js.executeScript("arguments[0].style.backgroundColor = '" + color + "'" , login);
+
+         jse.executeScript("arguments[0].style.border = '4px solid black'", pages.accountMenu);
+        //       jse.executeScript("arguments[0].style.backgroundColor = 'yellow'" , pages.accountMenu);
+
+
+        veya
+         jse.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 4px solid black;');", element);
+
+         jse.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 4px solid black;');", pages.accountMenu);
+        //        jse.executeScript("arguments[0].setAttribute('style', 'background: yellow;');", pages.accountMenu);
+        //        jse.executeScript("arguments[0].setAttribute('style', 'border: 4px solid red;');", pages.accountMenu);
+
+********************************
+
